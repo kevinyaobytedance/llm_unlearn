@@ -1,0 +1,7 @@
+__pycache__/
+*~
+\#*
+myenv/*
+models/*
+logs/*
+data/*
