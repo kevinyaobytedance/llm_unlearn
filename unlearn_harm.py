@@ -145,6 +145,9 @@ def main(args) -> None:
     end_time = time.time()
     logging.info("Total time: %d sec" % (end_time - start_time))
 
+    if args.use_lora:
+        model = model.merge_and_unload()
+
     # Save final model.
     model.save_pretrained(args.model_save_dir, from_pt=True)
     logging.info("Unlearning finished")
